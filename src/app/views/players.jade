@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    .container
+        .row
+            .col-md-12
+                form(action='/players/new', enctype='multipart/form-data', method='post')
+                    .form-group
+                        label(for='firstNameInput') First Name
+                        input(type='text', class='form-control', id='firstNameInput', name='firstName', placeholder='Foo')
+                    .form-group
+                        label(for='lastNameInput') Last Name
+                        input(type='text', class='form-control', id='lastNameInput', name='lastName', placeholder='Barenson')
+                    .form-group
+                        label(for="imgInput") Upload an Avatar
+                        input(type='file', id='imgInput', name='img')
+                        p 200x200 Maximum Dimensions
+                    button.btn.btn-default(type='submit', id='submitForm') Submit

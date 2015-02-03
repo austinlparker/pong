@@ -1,0 +1,34 @@
+extends gameLayout
+
+block content
+    .container(id='selectPlayer')
+        .row
+            .col-md-6.text-center
+                h1 Select Player One
+                each player in players
+                    #player1
+                        img.img-circle(src=player.img.path)
+                        h4= player.firstName + " " + player.lastName
+            .col-md-6.text-center
+                h1 Select Player Two
+                each player in players
+                    #player2
+                        img.img-circle(src=player.img.path)
+                        h4= player.firstName + " " + player.lastName
+    .container.hidden(id='gameProgressView')
+        .row
+            .col-md-5.text-center
+                h1.unselectable(id='p1Score') 0
+            .col-md-2.text-center
+                h1.unselectable(id='bar') -
+            .col-md-5.text-center
+                h1.unselectable(id='p2Score') 0
+        .row
+            .col-md-6.text-left
+                .p1game
+            .col-md-6.text-right
+                .p2game
+
+
+
+

@@ -1,0 +1,41 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+#p1Score {
+    font-size: 25em;
+}
+
+#p2Score {
+    font-size: 25em;
+}
+
+#bar {
+    font-size: 25em;
+}
+
+.p1game #player1 h4{
+    font-size: 5em;
+}
+
+.p2game #player2 h4{
+    font-size: 5em;
+}
+.selected {
+    background-color: #bada55;
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

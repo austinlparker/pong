@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    .container
+        .row
+            .col-md-12
+                h1= title
+        .row
+            .col-md-4.text-center
+                h2 Most Recent Games
+                ul
+                    for game in recentgames
+                        li
+                            h3= game.winner + " vs. " + game.loser
+                            h3= game.winScore + " - " + game.loseScore
+                    else
+                        li No Recent Games
+            .col-md-4.text-center
+                h2 Top Players
+                    for player in recentplays
+                        h4= player.firstName + " " + player.lastName + " (" + player.wins + "-" + player.losses + ") "
+                            img.img-circle(src=player.img.path)
+                    else
+                        li No Players
+            .col-md-4.text-center
+                h2 Upcoming Events
+                p NYI

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    .container
+        .row
+            for player in players
+                .col-md-2.text-center
+                    img.img-circle(src=player.img.path)
+                    h4= player.firstName + " " + player.lastName
+                    h5= player.wins + " W - " + player.losses + " L"
